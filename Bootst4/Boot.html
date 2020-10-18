@@ -20,15 +20,35 @@
             -o-transition: all .45s;
             transform: scale(1.1);
         }
+
+        .alert {
+            padding: 15px;
+            border: 1px solid #d6e9c6;
+            border-radius: 4px;
+            color: #3c763d;
+            background-color: #dff0d8;
+        }
+
+
     </style>
 </head>
 <body class="fon">
 <h1 class="container h" >Изучаем HTML SCC и JS</h1>
 
-
-
+    <div class="container" onclick="fer()">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto consequuntur facere, nesciunt obcaecati rerum sequi?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aliquid dolorum eveniet nesciunt quidem. A cupiditate
+        harum maxime numquam sapiente. A ab ipsam nam porro quas voluptatem voluptatum.
+        Doloremque id illo maxime optio provident quia sint temporibus ullam vel. Beatae culpa ducimus maxime perspiciatis quibusdam.</p>
+    </div>
     <script type="text/javascript">
+        function fer() {
+        let div = document.createElement('div');
+        div.className = "alert";
+        div.innerHTML = "<strong>Сообщение</strong> Хуй тебе сука.";
 
+        document.body.append(div);
+        }
     </script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
