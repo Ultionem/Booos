@@ -88,11 +88,13 @@
                     div1.className = "alert1";
                     div1.innerHTML = "<strong>Инф.</strong> Едим.";
                     document.body.append(div1);
+                    setTimeout(() => div1.remove(), 1000);
                 }else{
                     let div2 = document.createElement('div');
                     div2.className = "alert2";
                     div2.innerHTML = "<strong>Инф.</strong> Заводи.";
                     document.body.append(div2);
+                    setTimeout(() => div2.remove(), 1000);
                 }
             }
         }
