@@ -23,6 +23,9 @@
         .j{
             margin-bottom: 15px;
         }
+        .collarS {
+            margin-bottom: 15px;
+        }
 
     </style>
 </head>
@@ -41,14 +44,25 @@
         Глушем
     </div>
 </div>
-    <div class="container">
+    <div class="container collarS">
     <p id="p" class="container">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis excepturi harum omnis pariatur sunt vel.</p>
 
         <button type="button" class="btn btn-dark" onclick="colorRed()">Жми сюда будет красный</button>
     <button type="button" class="btn btn-dark" onclick="colorGrin()">Жми сюда будет синий</button>
     </div>
 
-
+<div class="container">
+    <p>
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            Кнопка
+        </button>
+    </p>
+    <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+            Вот такая  интересная информация
+        </div>
+    </div>
+</div>
     <script type="text/javascript">
 
         function colorRed() {
