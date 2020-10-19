@@ -9,7 +9,7 @@
 
     <style type="text/css">
         .fon {
-            background-color: #847c7c;
+            background-color: #adaaaa;
         }
         .h {
             margin-top: 17px;
@@ -20,24 +20,8 @@
             -o-transition: all .45s;
             transform: scale(1.1);
         }
-
-        .alert1 {
-            margin-left: 100px;
-            margin-right: 100px;
-            padding: 15px;
-            border: 1px solid #d6e9c6;
-            border-radius: 4px;
-            color: #3c763d;
-            background-color: #dff0d8;
-        }
-        .alert2 {
-            margin-left: 100px;
-            margin-right: 100px;
-            padding: 15px;
-            border: 1px solid #e9c6c6;
-            border-radius: 4px;
-            color: #763c3c;
-            background-color: #f0d8d8;
+        .j{
+            margin-bottom: 15px;
         }
 
     </style>
@@ -45,19 +29,36 @@
 <body class="fon">
 <h1 class="container h" >Изучаем HTML SCC и JS</h1>
 
-    <div class="container" onclick="startA()">
+<div class="container j">
+
+    <div class="badge badge-success"  onclick="startA()">
         Заводим
     </div>
-    <div class="container" onclick="driveA()">
+    <div class="badge badge-info" onclick="driveA()">
         Проверяем
     </div>
-    <div class="container" onclick="stopA()">
+    <div class="badge badge-danger" onclick="stopA()">
         Глушем
     </div>
+</div>
+    <div class="container">
+    <p id="p" class="container">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis excepturi harum omnis pariatur sunt vel.</p>
 
-    <p class="container">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis excepturi harum omnis pariatur sunt vel.</p>
+        <button type="button" class="btn btn-dark" onclick="colorRed()">Жми сюда будет красный</button>
+    <button type="button" class="btn btn-dark" onclick="colorGrin()">Жми сюда будет синий</button>
+    </div>
+
+
     <script type="text/javascript">
 
+        function colorRed() {
+            document.body.style.background = "red";
+            setTimeout(() => document.body.style.background = "", 9000);
+        }
+        function colorGrin() {
+            document.body.style.background = "#515aea";
+            setTimeout(() => document.body.style.background = "", 9000);
+        }
 
         function driveA () {
             avto.drive();
@@ -87,15 +88,15 @@
             drive: function () {
                 if (this.started) {
                     let div1 = document.createElement('div');
-                    div1.className = "alert1";
+                    div1.className = "alert alert-success";
                     div1.innerHTML = "<strong>Инф.</strong> Едим.";
-                    document.body.append(div1);
+                    p.prepend(div1);
                     setTimeout(() => div1.remove(), 7000);
                 }else{
                     let div2 = document.createElement('div');
-                    div2.className = "alert2";
+                    div2.className = "alert alert-danger";
                     div2.innerHTML = "<strong>Инф.</strong> Заводи.";
-                    document.body.append(div2);
+                    p.prepend(div2);
                     setTimeout(() => div2.remove(), 7000);
                 }
             }
